@@ -1,0 +1,30 @@
+<div class="mt-1 mb-5 text-white"><h3>{{ 'CovidDashboard.global' | translate }}    </h3></div>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center px-3">
+  <div class="col">
+    <div class="card text-white bg-danger mb-3">
+      <div class="card-header">{{ 'CovidDashboard.deaths' | translate }} </div>
+      <div class="card-body">
+        <p class="card-text"> {{ 'CovidDashboard.totalDeaths' | translate }} <br> {{ summary?.global?.totalDeaths | number }}</p>
+        <p class="card-text">{{ 'CovidDashboard.newDeaths' | translate }} <br>{{ summary?.global?.newDeaths | number }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-header">{{ 'CovidDashboard.confirmed' | translate }}  </div>
+      <div class="card-body">
+        <p class="card-text"> {{ 'CovidDashboard.totalCases' | translate }}  <br> {{ summary?.global?.totalConfirmed | number }}</p>
+        <p class="card-text"> {{ 'CovidDashboard.newCases' | translate }} <br>{{ summary?.global?.newConfirmed | number }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-header">{{ 'CovidDashboard.recovered' | translate }}  </div>
+      <div class="card-body">
+        <p class="card-text"> {{ 'CovidDashboard.totalRecovered' | translate }}  <br> {{ summary?.global?.totalRecovered | number }} </p>
+        <p class="card-text">{{ 'CovidDashboard.newRecovered' | translate }}  <br> {{ summary?.global?.newRecovered | number }}</p>
+      </div>
+    </div>
+  </div>
+</div>

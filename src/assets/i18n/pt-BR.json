@@ -1,0 +1,18 @@
+{
+    "nav": {
+        "title": "Monitor de Covid-19",
+        "languageSelect": "Selecione uma Linguagem"
+    },
+    "CovidDashboard": {
+        "recovered": "Casos Recuperados",
+        "confirmed": "Casos Confirmados",
+        "deaths": "Óbitos",
+        "global": "Casos Globais",
+        "newDeaths": "Novas Mortes",
+        "newCases": "Novos Casos",
+        "newRecovered": "Novos Recuperados",
+        "totalDeaths": "Total de Mortes",
+        "totalCases": "Total de Casos",
+        "totalRecovered": "Total de Recuperados"
+    }
+}
