@@ -4,10 +4,12 @@
         "languageSelect": "Select language"
     },
     "CovidDashboard": {
+        "titles": {
+            "global": "Global Numbers"
+        },
         "recovered": "Recovered",
         "confirmed": "Confirmed",
         "deaths": "Deaths",
-        "global": "Global Cases",
         "newDeaths": "New Deaths",
         "newCases": "New Cases",
         "newRecovered": "New Recovered",

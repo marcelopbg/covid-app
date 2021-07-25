@@ -15,7 +15,8 @@ export class CovidDashboardComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.summaryService.getSummary().subscribe(r => this.summary = r)
+    this.summaryService.getConfig().subscribe(r => {
+      this.summaryService.getSummary(r.address).subscribe(r => this.summary = r)
+    });
   }
-
 }

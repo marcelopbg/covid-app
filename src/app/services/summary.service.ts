@@ -3,24 +3,25 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { ISummary } from '../entities/ISummary.model';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-
+import { ApiUrlService } from './api-url.service';
 @Injectable({ providedIn: 'root' })
 
 export class SummaryService {
 
-  apiUrl = "http://localhost:49156/api/covid" 
+  constructor(private httpClient: HttpClient, private apiService: ApiUrlService) {
+   }
 
-  constructor(private httpClient: HttpClient) { }
-
-  getSummary(): Observable<ISummary> {
-    return this.httpClient.get<ISummary>(this.apiUrl)
+  getSummary(apiUrl: string): Observable<ISummary> {
+    return this.httpClient.get<ISummary>(`${apiUrl}/api/covid`)
     .pipe(
       tap(_ => console.log('fetched summary'),
       catchError(this.handleError<ISummary>('getSummary'))
     ));
   }
 
-
+  getConfig(): Observable<{address: string}> {
+    return this.apiService.getConfig();
+  }
   
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

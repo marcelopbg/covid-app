@@ -12,6 +12,8 @@ export class AppComponent {
   constructor(public translate: TranslateService) {
     this.configTranslate(translate);
   }
+  ngOnInit(): void {
+  }
   title = 'covid-app';
   faVirus = faVirus;
   faGlobe = faGlobe;
